@@ -52,11 +52,11 @@ const getAllBooks = () => {
 };
 
 const getBooksByAuthor = author => {
-  return BookCollection.findById({ author: author });
+  return BookCollection.findOne({ author: author });
 };
 
 const getBooksByTitle = title => {
-  return BookCollection.findById({ title: title });
+  return BookCollection.findOne({ title: title });
 };
 
 const getBookById = bookId => {
@@ -68,7 +68,7 @@ const addNewBook = newBook => {
 };
 
 const updateBook = (bookId, newBook) => {
-  return BookCollection.updateOne({ _id: bookId, newBook });
+  return BookCollection.updateOne({ _id: bookId }, newBook);
 };
 
 const deleteBook = bookId => {

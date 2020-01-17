@@ -56,8 +56,7 @@ bookRouter.get("/", async (req, res) => {
   try {
     const books = await creatureApi.getAllBooks();
     console.log(books);
-    res.json(books);
-    return;
+    return res.json(books);
   } catch (e) {
     console.log(e);
   }
