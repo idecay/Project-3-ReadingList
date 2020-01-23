@@ -21,7 +21,9 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <h1>ReadingList</h1>
+        <div className="title">
+          <h1>ReadingList</h1>
+        </div>
         <Search />
       </div>
     );
