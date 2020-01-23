@@ -17,6 +17,8 @@ const app = express();
  *
  */
 const { bookRouter } = require("./controllers/book.js");
+const { genreRouter } = require("./controllers/genre.js");
+const { userRatingRouter } = require("./controllers/userRating.js");
 
 /* Step 3
  *
@@ -47,6 +49,8 @@ app.use(express.static(`${__dirname}/client/build`));
  * the paths defined in the router.
  */
 app.use("/api/book", bookRouter);
+app.use("/api/genre", genreRouter);
+app.use("/api/userRating", userRatingRouter);
 
 /* Step 5
  *
