@@ -17,8 +17,8 @@ function App() {
               <img
                 src="/booklogo.png"
                 alt="Logo"
-                width="100px"
-                height="100px"
+                width="125px"
+                height="125px"
               />
             </div>
             <div className="links">
