@@ -106,6 +106,8 @@ h1 {
   align-content: center;
 }
 
-.book {
+.book-container {
   color: maroon;
+  display: inline-flex;
+  padding: 5px;
 }

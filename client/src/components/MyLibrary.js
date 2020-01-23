@@ -25,18 +25,19 @@ export default class MyLibrary extends Component {
         <h1>My Library</h1>
         {this.state.bookList.map(book => {
           return (
-            <div>
-              <Link to={`/${book._id}`}>
-                <div className="book">
-                  {book.title} <br />
-                  <img
-                    src={book.image}
-                    alt="Book Cover"
-                    height="200px"
-                    width="150px"
-                  />
-                </div>
-              </Link>
+            <div className="book-container">
+              <div className="books">
+                <Link to={`/${book._id}`}>
+                  <div className="book">
+                    <img
+                      src={book.image}
+                      alt="Book Cover"
+                      height="200px"
+                      width="150px"
+                    />
+                  </div>
+                </Link>
+              </div>
             </div>
           );
         })}
