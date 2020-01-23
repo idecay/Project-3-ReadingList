@@ -1,31 +1,12 @@
-# mern-template-project
+# Project-3-ReadingList
 
-# Setup A New Project From This Template
+## Why ReadingList?
 
-If you are starting a new project do the following:
+Ever been somewhere and recieved a book recomendation only to forget the title when finally able to look it up? [ReadingList](https://infinite-mountain-82431.herokuapp.com/home "ReadingList Homepage") aims to correct this issue by giving users a quick and easy tool for saving books to their own ReadingList.
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+[ReadingList App](https://infinite-mountain-82431.herokuapp.com/home "ReadingList Homepage")
+[Trello Board](https://trello.com/b/rr4jIUmq/project-3-reading-list "Project-3-ReadingList")
 
-# Setup A New Project Without This Template
+## ERD
 
-If you want to start a project without using this template directory do the
-following:
-
-
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
+![alt text](./client/public/ReadingList-ERD.jpeg "ReadingList ERD")
