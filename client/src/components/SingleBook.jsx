@@ -55,11 +55,11 @@ export default class SingleBook extends Component {
         />
         <h1>{this.state.book.title}</h1>
         <h4>By {this.state.book.author}</h4>
-        <h4>Genre: {this.state.book.genreId.name}</h4>
+        {/* <h4>Genre: {this.state.book.genreId.name}</h4> */}
         <p>{this.state.book.description}</p>
 
-        <h1>Rating</h1>
-        <img src="#" alt="rating" />
+        {/* <h1>Rating</h1>
+        <img src="#" alt="rating" /> */}
 
         <button
           onClick={() => this.onBookDeleteClick(this.props.match.params.bookId)}

@@ -14,12 +14,14 @@ function App() {
         <div className="navbar">
           <nav>
             <div className="logo">
-              <img
-                src="/booklogo.png"
-                alt="Logo"
-                width="125px"
-                height="125px"
-              />
+              <Link to="/home">
+                <img
+                  src="/booklogo.png"
+                  alt="Logo"
+                  width="125px"
+                  height="125px"
+                />
+              </Link>
             </div>
             <div className="links">
               <Link to="/home">

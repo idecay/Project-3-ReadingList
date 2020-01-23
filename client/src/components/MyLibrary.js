@@ -26,7 +26,17 @@ export default class MyLibrary extends Component {
         {this.state.bookList.map(book => {
           return (
             <div>
-              <Link to={`/${book._id}`}>{book.title}</Link>
+              <Link to={`/${book._id}`}>
+                <div className="book">
+                  {book.title} <br />
+                  <img
+                    src={book.image}
+                    alt="Book Cover"
+                    height="200px"
+                    width="150px"
+                  />
+                </div>
+              </Link>
             </div>
           );
         })}

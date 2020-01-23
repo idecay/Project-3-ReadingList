@@ -12,7 +12,7 @@ export default class CreateBook extends Component {
       id: 0,
       description: "",
       image: "",
-      genreId: {}
+      genreId: ""
     },
     selectedGenre: "",
     redirect: false,
