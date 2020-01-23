@@ -1,52 +1,37 @@
-/*
- * Place all functions, classes, and/or DB schemas here for a single
- * model.
- */
-
-/* Step 1
- *
- * TODO: import mongoose connection
- * NOTE: skip this if you are not using mongoose
- *
- */
 const mongoose = require("./connection.js");
 
-/* Step 1 alternative
- *
- * TODO: make a global variable to act as an in memory database.
- * NOTE: doing this WILL NOT persist your data and you will loose
- * your data once you stop running your server.
- *
- */
 global.sampleModel = [];
 
-/* Step 2
- *
- * TODO: create model schema
- * NOTE: skip this if you are not using mongoose
- *
- */
+const sampleDescriptions = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "Nullam ac tortor vitae purus faucibus ornare. Viverra aliquet eget sit amet tellus.",
+  "Mi eget mauris pharetra et ultrices neque ornare aenean.",
+  "Blandit cursus risus at ultrices. In egestas erat imperdiet sed euismod nisi porta.",
+  "Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus.",
+  "Pulvinar proin gravida hendrerit lectus a.",
+  " Enim facilisis gravida neque convallis a."
+];
+
 const BookSchema = new mongoose.Schema({
   title: String,
   author: String,
   id: Number,
   description: String,
-  image: String
+  image: String,
+  genreId: {
+    type: String,
+    default: ""
+  }
 });
 
-/* Step 3
- *
- * TODO: create collection API
- * NOTE: skip this if you are not using mongoose
- *
- */
 const BookCollection = mongoose.model("Book", BookSchema);
 
-/* Step 4
- *
- * TODO: delete this it's just a sample
- *
- */
+function getRandomDescription() {
+  return sampleDescriptions[
+    Math.floor(Math.random() * sampleDescriptions.length)
+  ];
+}
+
 const getAllBooks = () => {
   return BookCollection.find();
 };
@@ -64,6 +49,9 @@ const getBookById = bookId => {
 };
 
 const addNewBook = newBook => {
+  if (!newBook.description) {
+    newBook.description = getRandomDescription();
+  }
   return BookCollection.create(newBook);
 };
 
